@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Number Game</title>
+</head>
+<body>
+    <h1>Welcome to the Great Number Game!</h1>
+    <p>I am thinking of a number between 1 and 100</p>
+    <div class="clue">
+        <% if(guess === undefined) { %>
+    <% } else if(number === guess) { %>
+        <p>Good Guess! <%= guess %> is the number</p>
+        <a href="/playAgain">Play Again</a>
+    <% } else if (guess > number) { %>
+        <p>Too High!</p>
+    <% } else { %>
+        <p> Too Low</p>
+        <% } %>
+    
+    </div>
+    <div class="form">
+        <form action="/guess" method='POST'>
+            <label for="guess">Take a guess!</label>
+            <input type="number" name="guess" id="guess">
+            <input type='submit' value='Button'>
+        </form>
+    </div>
+    
+    
+</body>
+</html>
